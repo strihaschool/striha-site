@@ -23,6 +23,13 @@
 
   <!-- Підключення Glide.js через CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+
+  <!-- Властивість для плавної прокрутки -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
 
@@ -56,20 +63,37 @@
     </div>
   </section>
 
-  <!-- [3] Contacts (новий блок) -->
-<section id="contacts" class="contacts">
-  <div class="container">
-    <h2>Контакти</h2>
-    <p>Зв'яжіться з нами, щоб дізнатися більше:</p>
-    <ul>
-      <li>Email: info@striha.school</li>
-      <li>Телефон: +380 00 000 000</li>
-      <!-- Додаткові контактні дані -->
-    </ul>
-  </div>
-</section>
+  <!-- [3] About секція (Про нас) -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>Про нас</h2>
+      <p>Ми – команда експертів у навчанні англійської мови з використанням AI-аналітики. Наша місія – допомогти вам досягти успіху в мовному навчанні.</p>
+    </div>
+  </section>
 
-  <!-- [3] Pain-Solution блок -->
+  <!-- [4] Courses секція (Курси) -->
+  <section id="courses" class="courses">
+    <div class="container">
+      <h2>Курси</h2>
+      <p>Оберіть зручний для вас курс для поглибленого вивчення англійської мови.</p>
+      <!-- Тут можна додати перелік курсів -->
+    </div>
+  </section>
+  
+  <!-- [5] Contacts секція -->
+  <section id="contacts" class="contacts">
+    <div class="container">
+      <h2>Контакти</h2>
+      <p>Зв'яжіться з нами, щоб дізнатися більше:</p>
+      <ul>
+        <li>Email: info@striha.school</li>
+        <li>Телефон: +380 00 000 000</li>
+        <!-- Додаткові контактні дані -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- [6] Pain-solution блок -->
   <section id="pain-solution" class="pain-solution">
     <div class="container">
       <h2>Твої проблеми – наші рішення</h2>
@@ -83,7 +107,7 @@
     </div>
   </section>
 
-  <!-- [4] Features -->
+  <!-- [7] Features блок -->
   <section id="features" class="features">
     <div class="container">
       <h2>Чому Striha School особлива?</h2>
@@ -98,7 +122,7 @@
     </div>
   </section>
 
-  <!-- [5] Комікс-карусель (#stories) -->
+  <!-- [8] Комікс-карусель (Stories) -->
   <section id="stories" class="stories">
     <div class="container">
       <h2>Комікс-історії наших маскотів</h2>
@@ -120,7 +144,7 @@
     </div>
   </section>
 
-  <!-- [6] Demo блок -->
+  <!-- [9] Demo блок -->
   <section id="demo" class="demo">
     <div class="container">
       <h2>Демо</h2>
@@ -131,7 +155,7 @@
     </div>
   </section>
 
-  <!-- [7] Pricing (опційно, можна приховати якщо не готово) -->
+  <!-- [10] Pricing блок (опційно) -->
   <section id="pricing" class="pricing" style="display: none;">
     <div class="container">
       <h2>Наші тарифи</h2>
@@ -141,7 +165,7 @@
     </div>
   </section>
 
-  <!-- [8] Reviews (відгуки) -->
+  <!-- [11] Reviews блок -->
   <section id="reviews" class="reviews">
     <div class="container">
       <h2>Відгуки наших студентів</h2>
@@ -158,7 +182,7 @@
     </div>
   </section>
 
-  <!-- [9] FAQ -->
+  <!-- [12] FAQ блок -->
   <section id="faq" class="faq">
     <div class="container">
       <h2>Часті запитання</h2>
@@ -172,7 +196,7 @@
     </div>
   </section>
 
-  <!-- [10] CTA-стрічка -->
+  <!-- [13] CTA-стрічка -->
   <section id="cta-strip" class="cta-strip">
     <div class="container">
       <h2>Стань частиною Striha School вже сьогодні!</h2>
@@ -180,7 +204,7 @@
     </div>
   </section>
 
-  <!-- [11] Footer -->
+  <!-- [14] Footer -->
   <footer id="footer" class="footer">
     <div class="container footer-content">
       <div class="footer-logo">
@@ -191,8 +215,8 @@
           <h4>Навігація</h4>
           <ul>
             <li><a href="#hero">Головна</a></li>
-            <li><a href="#pain-solution">Рішення</a></li>
-            <li><a href="#features">Можливості</a></li>
+            <li><a href="#about">Про нас</a></li>
+            <li><a href="#courses">Курси</a></li>
             <li><a href="#contacts">Контакти</a></li>
           </ul>
         </div>
@@ -220,12 +244,12 @@
     </div>
   </footer>
 
-  <!-- Підключення бібліотеки Glide.js через CDN -->
+  <!-- Підключення Glide.js через CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
   
   <!-- Підключення власного скрипту -->
   <script src="js/main.js"></script>
-
+  
   <!-- Google Analytics 4 (опціонально) -->
   <!--
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -238,4 +262,3 @@
   -->
 </body>
 </html>
-
