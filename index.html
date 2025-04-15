@@ -1,140 +1,228 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Головна сторінка платформи</title>
-  <style>
-    /* Загальний ресет для всіх елементів */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #fefefe;
-      color: #333;
-      line-height: 1.6;
-    }
-    /* Шапка сайту */
-    header {
-      background-color: #fff;
-      border-bottom: 1px solid #ddd;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    /* Логотип */
-    header .logo {
-      font-size: 28px;
-      font-weight: bold;
-      color: #c0392b;
-    }
-    /* Меню навігації */
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-      font-size: 16px;
-      transition: color 0.3s;
-    }
-    nav ul li a:hover {
-      color: #c0392b;
-    }
-    /* Hero секція */
-    .hero {
-      background: url('your-background-image.jpg') center/cover no-repeat; /* Замініть на URL свого зображення */
-      height: 500px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-      color: #fff;
-      position: relative;
-    }
-    /* Додавання напівпрозорого шару для кращої читабельності тексту */
-    .hero:before {
-      content: "";
-      background: rgba(0, 0, 0, 0.4);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
-    .hero > * {
-      position: relative;
-      z-index: 2;
-    }
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    }
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 30px;
-      max-width: 600px;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    }
-    .btn {
-      background-color: #c0392b;
-      color: #fff;
-      padding: 15px 30px;
-      font-size: 18px;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-    .btn:hover {
-      background-color: #a93226;
-    }
-    /* Підвал сторінки */
-    footer {
-      background-color: #fff;
-      border-top: 1px solid #ddd;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #666;
-      margin-top: 20px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Striha School — Онлайн-школа англійської</title>
+
+  <!-- Meta Description для SEO -->
+  <meta name="description" content="Онлайн-школа англійської з AI-аналітикою. Пробний урок безкоштовно." />
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Striha School — Онлайн-школа англійської" />
+  <meta property="og:description" content="Вивчай англійську з аналітикою та зручним дашбордом. Запишись на пробний урок!" />
+  <meta property="og:image" content="https://striha.school/assets/img/preview.jpg" />
+  <meta property="og:url" content="https://striha.school" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" />
+
+  <!-- Підключення CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+
+  <!-- Підключення Glide.js через CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
 </head>
 <body>
-  <!-- Шапка сайту з логотипом та меню -->
-  <header>
-    <div class="logo">Striha School</div>
-    <nav>
-      <ul>
-        <li><a href="#">Головна</a></li>
-        <li><a href="#">Про нас</a></li>
-        <li><a href="#">Курси</a></li>
-        <li><a href="#">Контакти</a></li>
-      </ul>
-    </nav>
+
+  <!-- [1] Navbar -->
+  <header id="navbar" class="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="assets/img/logo-ua.svg" alt="Striha School Logo" />
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="#hero">Головна</a></li>
+          <li><a href="#about">Про нас</a></li>
+          <li><a href="#courses">Курси</a></li>
+          <li><a href="#contacts">Контакти</a></li>
+        </ul>
+      </nav>
+      <button id="btn-app" class="btn-app">Увійти в APP</button>
+    </div>
   </header>
-  
-  <!-- Hero секція з теплим привітанням -->
-  <section class="hero">
-    <h1>Ласкаво просимо у нашу спільноту!</h1>
-    <p>Ми щиро раді вітати тебе в Striha School — місці, де панує тепло, взаємна підтримка та нескінченні можливості для саморозвитку. Долучайся до нас і разом ми створимо краще майбутнє!</p>
-    <a href="#" class="btn">Розпочати подорож</a>
+
+  <!-- [2] Hero секція -->
+  <section id="hero" class="hero">
+    <div class="container hero-content">
+      <h1>Вивчай англійську легко</h1>
+      <p>Швидко, інтерактивно та з повним аналізом твоїх результатів!</p>
+      <div class="hero-cta">
+        <a href="#trial" id="btn-trial" class="btn btn-primary">Пробний урок</a>
+        <a href="https://app.striha.school" class="btn btn-outline" id="btn-hero-app">Увійти в APP</a>
+      </div>
+    </div>
   </section>
-  
-  <!-- Підвал з додатковою інформацією -->
-  <footer>
-    &copy; 2025 Striha School. Всі права захищені.
+
+  <!-- [3] Pain-Solution блок -->
+  <section id="pain-solution" class="pain-solution">
+    <div class="container">
+      <h2>Твої проблеми – наші рішення</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Проблема: Відсутність мотивації</h3>
+          <p>Рішення: Інтерактивні уроки з викликами та нагородами.</p>
+        </div>
+        <!-- Додай ще 2 картки -->
+      </div>
+    </div>
+  </section>
+
+  <!-- [4] Features -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Чому Striha School особлива?</h2>
+      <div class="feature-list">
+        <div class="feature-item">
+          <img src="assets/icons/ai.svg" alt="AI-транскрипція" />
+          <h3>AI-транскрипція</h3>
+          <p>Заняття аналізуються за допомогою ШІ.</p>
+        </div>
+        <!-- Додай ще 3 картки -->
+      </div>
+    </div>
+  </section>
+
+  <!-- [5] Комікс-карусель (#stories) -->
+  <section id="stories" class="stories">
+    <div class="container">
+      <h2>Комікс-історії наших маскотів</h2>
+      <div class="glide" id="mascotCarousel">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <img src="assets/img/maskot1.png" alt="Маскот 1" />
+              <p>Історія 1: «І перший Hello!»</p>
+            </li>
+            <!-- Додай ще 6 слайдів -->
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">«</button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">»</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- [6] Demo блок -->
+  <section id="demo" class="demo">
+    <div class="container">
+      <h2>Демо</h2>
+      <div class="demo-content">
+        <img src="assets/img/dashboard-example.png" alt="Скріншот дашборду" />
+        <video controls src="assets/video/demo.mp4" width="480"></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- [7] Pricing (опційно, можна приховати якщо не готово) -->
+  <section id="pricing" class="pricing" style="display: none;">
+    <div class="container">
+      <h2>Наші тарифи</h2>
+      <div class="pricing-plans">
+        <!-- Тарифні плани -->
+      </div>
+    </div>
+  </section>
+
+  <!-- [8] Reviews (відгуки) -->
+  <section id="reviews" class="reviews">
+    <div class="container">
+      <h2>Відгуки наших студентів</h2>
+      <div class="glide" id="reviewsCarousel">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <p>“Завдяки Striha School мої знання зросли!” — <strong>Олена</strong></p>
+            </li>
+            <!-- Додай ще 2-3 відгуки -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- [9] FAQ -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <h2>Часті запитання</h2>
+      <div class="faq-item">
+        <button class="faq-question">Чи можна займатися в будь-який час?</button>
+        <div class="faq-answer">
+          <p>Так, розклад вільний – обирай зручний час.</p>
+        </div>
+      </div>
+      <!-- Додай ще 5-7 FAQ -->
+    </div>
+  </section>
+
+  <!-- [10] CTA-стрічка -->
+  <section id="cta-strip" class="cta-strip">
+    <div class="container">
+      <h2>Стань частиною Striha School вже сьогодні!</h2>
+      <a href="#trial" class="btn btn-primary">Записатися</a>
+    </div>
+  </section>
+
+  <!-- [11] Footer -->
+  <footer id="footer" class="footer">
+    <div class="container footer-content">
+      <div class="footer-logo">
+        <img src="assets/img/logo-ua.svg" alt="Striha School Logo" />
+      </div>
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>Навігація</h4>
+          <ul>
+            <li><a href="#hero">Головна</a></li>
+            <li><a href="#pain-solution">Рішення</a></li>
+            <li><a href="#features">Можливості</a></li>
+            <li><a href="#contacts">Контакти</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Ресурси</h4>
+          <ul>
+            <li><a href="#demo">Як це працює</a></li>
+            <li><a href="#reviews">Відгуки</a></li>
+            <li><a href="privacy.html">Політика конфіденційності</a></li>
+            <li><a href="terms.html">Умови користування</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <!-- За потреби додати посилання -->
+        </div>
+        <div class="footer-col">
+          <h4>Соцмережі</h4>
+          <!-- Іконки соцмереж -->
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Striha School. Всі права захищені.
+    </div>
   </footer>
+
+  <!-- Підключення бібліотеки Glide.js через CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+  
+  <!-- Підключення власного скрипту -->
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics 4 (опціонально) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
 </body>
 </html>
 
