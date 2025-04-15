@@ -1,0 +1,175 @@
+/* main.css */
+
+/* Загальний ресет */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fdfdfd;
+}
+/* Контейнер */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  z-index: 999;
+  padding: 10px 0;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo img {
+  max-height: 50px;
+}
+.navbar .menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.navbar .menu ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+}
+.btn-app {
+  background-color: #c0392b;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Hero секція */
+.hero {
+  background: #bbb url('assets/img/hero-bg.jpg') center/cover no-repeat;
+  padding: 60px 0;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.hero-cta .btn {
+  margin: 0 10px;
+}
+
+/* Кнопки */
+.btn {
+  background-color: #c0392b;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: #a93226;
+}
+.btn-outline {
+  background-color: transparent;
+  color: #c0392b;
+  border: 2px solid #c0392b;
+}
+.btn-outline:hover {
+  background-color: #c0392b;
+  color: #fff;
+}
+
+/* Секції (pain-solution, features, stories тощо) */
+.pain-solution, .features, .stories, .demo, .pricing, .reviews, .faq, .cta-strip {
+  padding: 60px 0;
+}
+.pain-solution h2, .features h2, .stories h2, .demo h2, .pricing h2, .reviews h2, .faq h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* FAQ - аккордеон */
+.faq-item {
+  margin-bottom: 15px;
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: #f1f1f1;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+}
+.faq-answer {
+  display: none;
+  background: #fff;
+  padding: 15px;
+}
+
+/* CTA-стрічка */
+.cta-strip {
+  text-align: center;
+  background-color: #f8f8f8;
+}
+.cta-strip h2 {
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  padding: 40px 0;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer-logo img {
+  max-height: 40px;
+}
+.footer-col h4 {
+  margin-bottom: 10px;
+}
+.footer-col ul {
+  list-style: none;
+}
+.footer-col ul li a {
+  text-decoration: none;
+  color: #333;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .navbar .menu ul {
+    display: none;
+  }
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
