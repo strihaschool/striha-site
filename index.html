@@ -1,11 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <title>Striha School</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Головна сторінка платформи</title>
+  <style>
+    /* Загальний ресет для всіх елементів */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fefefe;
+      color: #333;
+      line-height: 1.6;
+    }
+    /* Шапка сайту */
+    header {
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    /* Логотип */
+    header .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #c0392b;
+    }
+    /* Меню навігації */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #c0392b;
+    }
+    /* Hero секція */
+    .hero {
+      background: url('your-background-image.jpg') center/cover no-repeat; /* Замініть на URL свого зображення */
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+      position: relative;
+    }
+    /* Додавання напівпрозорого шару для кращої читабельності тексту */
+    .hero:before {
+      content: "";
+      background: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    .hero > * {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      max-width: 600px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+    .btn {
+      background-color: #c0392b;
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #a93226;
+    }
+    /* Підвал сторінки */
+    footer {
+      background-color: #fff;
+      border-top: 1px solid #ddd;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #666;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Striha School!</h1>
-  <p>This is our official website, built with GitHub Pages ❤️</p>
+  <!-- Шапка сайту з логотипом та меню -->
+  <header>
+    <div class="logo">Striha School</div>
+    <nav>
+      <ul>
+        <li><a href="#">Головна</a></li>
+        <li><a href="#">Про нас</a></li>
+        <li><a href="#">Курси</a></li>
+        <li><a href="#">Контакти</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Hero секція з теплим привітанням -->
+  <section class="hero">
+    <h1>Ласкаво просимо у нашу спільноту!</h1>
+    <p>Ми щиро раді вітати тебе в Striha School — місці, де панує тепло, взаємна підтримка та нескінченні можливості для саморозвитку. Долучайся до нас і разом ми створимо краще майбутнє!</p>
+    <a href="#" class="btn">Розпочати подорож</a>
+  </section>
+  
+  <!-- Підвал з додатковою інформацією -->
+  <footer>
+    &copy; 2025 Striha School. Всі права захищені.
+  </footer>
 </body>
 </html>
+
